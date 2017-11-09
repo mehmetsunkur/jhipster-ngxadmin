@@ -1,0 +1,42 @@
+[mehmet@mehmet jhipster-ngxadmin]$ jhipster 
+Using JHipster version installed globally
+Running default command
+Executing jhipster:app
+Options: 
+
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+
+                            http://www.jhipster.tech
+
+Welcome to the JHipster Generator v4.10.2
+Documentation for creating an application: http://www.jhipster.tech/creating-an-app/
+Application files will be generated in folder: /home/mehmet/dev/projects/sunkur/public/jhipster-ngxadmin
+WARNING! Failed to connect to "git://github.com"
+1. Check your Internet connection.
+2. If you are using an HTTP proxy, try this command: git config --global url."https://".insteadOf git://
+? Which *type* of application would you like to create? Monolithic application (recommended for simple projects)
+? What is the base name of your application? jhipster
+? What is your default Java package name? net.sunkur.jhipster
+? Do you want to use the JHipster Registry to configure, monitor and scale your application? No
+? Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
+? Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
+? Which *production* database would you like to use? MySQL
+? Which *development* database would you like to use? H2 with disk-based persistence
+? Do you want to use Hibernate 2nd level cache? No
+? Would you like to use Maven or Gradle for building the backend? Maven
+? Which other technologies would you like to use? Social login (Google, Facebook, Twitter)
+? Which *Framework* would you like to use for the client? Angular 4
+? Would you like to enable *SASS* support using the LibSass stylesheet preprocessor? Yes
+? Would you like to enable internationalization support? Yes
+? Please choose the native language of the application English
+? Please choose additional languages to install Turkish
+? Besides JUnit and Karma, which testing frameworks would you like to use? Gatling, Cucumber, Protractor
+? Would you like to install other generators from the JHipster Marketplace? No
+
+Installing languages: en, tr
