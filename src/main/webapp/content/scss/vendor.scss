@@ -12,3 +12,16 @@ eg $input-color: red;
 @import 'node_modules/font-awesome/scss/font-awesome';
 
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
+
+// ngx-admin styles
+@import 'node_modules/@nebular/theme/styles/prebuilt/default.scss';
+@import 'node_modules/@nebular/theme/styles/prebuilt/cosmic.scss';
+@import "~typeface-exo/index.css";
+@import "~roboto-fontface/css/roboto/roboto-fontface.css";
+$ionicons-font-path: '~ionicons/fonts';
+@import "node_modules/ionicons/scss/ionicons.scss";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+$nebular-icons-font-path: '~nebular-icons/fonts';
+@import "node_modules/nebular-icons/scss/nebular-icons.scss";
+@import "~socicon/css/socicon.css";
+@import "../../app/ngx-admin/@theme/styles/styles.scss";
