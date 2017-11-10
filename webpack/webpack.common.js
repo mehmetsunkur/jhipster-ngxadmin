@@ -101,7 +101,8 @@ module.exports = (options) => {
             ]),
             new webpack.ProvidePlugin({
                 $: "jquery",
-                jQuery: "jquery"
+                jQuery: "jquery",
+                echarts: "echarts"
             }),
             new MergeJsonWebpackPlugin({
                 output: {
