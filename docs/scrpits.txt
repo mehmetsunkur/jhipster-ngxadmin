@@ -1,0 +1,61 @@
+git clone https://github.com/akveo/ngx-admin.git;
+cd ngx-admin;
+
+Dependency merge;
+We need to add dependencies to package.json from ngx-admin/package.json that is not exists.
+Also you need to check version of dependency that is already exists. You can pick ngx-admin version if it is upper.
+
+Copy ngx-admin ui-component files;
+mkdir src/main/webapp/app/ngx-admin;
+cp -R ../ngx-admin/src/app/* src/main/webapp/app/ngx-admin/
+
+--switch bootstrap module to ngx-admin app.module in app.main.ts
+
+-- overwrite index.html from ngx-admin
+cp ../ngx-admin/src/index.html src/main/webapp/index.html 
+
+tyring to build:
+yarn webpack:build; get errors because added dependencies are not installed;
+install added dependencies;
+npm install;
+
+yarn webpack:build; get errors "Cannot find name 'tinymce'."
+ERROR in [at-loader] ./src/main/webapp/app/ngx-admin/@theme/components/tiny-mce/tiny-mce.component.ts:16:5 
+    TS2304: Cannot find name 'tinymce'.
+
+--To fix that copy typings.d.ts which has global definition of 'tinymce' and import it in app-module
+Fix "Cannot find name 'tinymce'" error
+cp ../ngx-admin/src/typings.d.ts src/main/webapp/app/ngx-admin/
+and import it in app-module
+
+yarn start;
+-Now the application starts up but you will see error in concole of browser
+ERROR Error: Uncaught (in promise): Error: Cannot find module 'app/pages/pages.module'.
+Because webpack cannot load string based module
+To fix that ;
+
+code replaced to remove string based routing by this commit.(There is angular-router-loader solution without touching code but it is not compatible now)
+ 
+
+yarn webpack:build; get errors because assets files are absent
+Module not found: Error: Can't resolve '../../../../assets/images/square_pattern.svg' i
+So copy the assets folder 
+cp -R ../ngx-admin/src/assets ./src/main/webapp/app/ngx-admin/
+and chage location in the code of rooms.component.scss  by this commit
+
+And configure webpack/webpack.common.js to copy assets folder to web folder to be able to served from application
+
+Now the app is starts up you can see someting different thwn ngx-admin since you did not apply theme. 
+
+
+Location update for new assets folder in rooms component scss 
+
+Add ngx-admin specific styles in to src/main/webapp/content/scss/vendor.scss
+
+and import vendor.ts which imports extra style from vendor.scss into ngx-admin's app module
+Now we can see ngx-admin page properly
+But you see errors in browsers console so menus and some components are not working well
+
+Echarts dependency install and compnent configs applied.
+npm install echarts@3.7.2 --save;
+ 
