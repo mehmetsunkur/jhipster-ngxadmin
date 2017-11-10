@@ -12,25 +12,32 @@ const routes: Routes = [{
     component: DashboardComponent,
   }, {
     path: 'ui-features',
-    loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
+    loadChildren: () => new Promise(resolve => {
+      (require as any).ensure([], require => {resolve(require('./ui-features/ui-features.module').UiFeaturesModule); })  }) 
   }, {
     path: 'components',
-    loadChildren: './components/components.module#ComponentsModule',
+    loadChildren: () => new Promise(resolve => {
+      (require as any).ensure([], require => {resolve(require('./components/components.module').ComponentsModule); })  }) 
   }, {
     path: 'maps',
-    loadChildren: './maps/maps.module#MapsModule',
+    loadChildren: () => new Promise(resolve => {
+      (require as any).ensure([], require => {resolve(require('./maps/maps.module').MapsModule); })  }) 
   }, {
     path: 'charts',
-    loadChildren: './charts/charts.module#ChartsModule',
+    loadChildren: () => new Promise(resolve => {
+      (require as any).ensure([], require => {resolve(require('./charts/charts.module').ChartsModule); })  }) 
   }, {
     path: 'editors',
-    loadChildren: './editors/editors.module#EditorsModule',
+    loadChildren: () => new Promise(resolve => {
+      (require as any).ensure([], require => {resolve(require('./editors/editors.module').EditorsModule); })  }) 
   }, {
     path: 'forms',
-    loadChildren: './forms/forms.module#FormsModule',
+    loadChildren: () => new Promise(resolve => {
+      (require as any).ensure([], require => {resolve(require('./forms/forms.module').FormsModule); })  }) 
   }, {
     path: 'tables',
-    loadChildren: './tables/tables.module#TablesModule',
+    loadChildren: () => new Promise(resolve => {
+      (require as any).ensure([], require => {resolve(require('./tables/tables.module').TablesModule); })  }) 
   }, {
     path: '',
     redirectTo: 'dashboard',
