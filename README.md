@@ -10,7 +10,13 @@ You can use them. But if you need to you 3rd party components it can be hard.
 ngx-admin has already 3rd party components(echars,tree,maps) that you can see how to apply theme.
 Thanks to the akveo team. They are doing great job.
 
-#Instructions:
+#To Test :
+1. clone this repo
+2. run "$ yarn install && yarn webpack:build;"
+3. run ./mvnw
+4. launch your browser -> http://localhost:8080 
+
+#Development Instructions:
 1. Generate JHipster project;
 2. Clone akveo/ngx-admin from github
 3. Switch to the demo branch
